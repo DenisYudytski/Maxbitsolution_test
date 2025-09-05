@@ -5,15 +5,15 @@ export default function CocktailCard({ cocktail }: { cocktail: Cocktail }) {
     <article className="card">
       <div className="cardContent">
         <h2 className="title">{cocktail.strDrink}</h2>
-        <div className="meta">
+        <section className="meta">
           <div>{cocktail.strCategory}</div>
           <div>{cocktail.strAlcoholic}</div>
           <div>{cocktail.strGlass}</div>
-        </div>
-        <div className="instructions">
+        </section>
+        <section className="instructions">
           <strong>Instructions:</strong> {cocktail.strInstructions}
-        </div>
-        <div className="ingredients">
+        </section>
+        <section className="ingredients">
           <strong>List of ingredients:</strong>
           <ul>
             {cocktail.ingredients.map((i, idx) => (
@@ -22,16 +22,16 @@ export default function CocktailCard({ cocktail }: { cocktail: Cocktail }) {
               </li>
             ))}
           </ul>
-        </div>
+        </section>
       </div>
-      <div className="thumbWrap">
+      <figure className="thumbWrap">
         <img
           src={cocktail.strDrinkThumb}
           alt={cocktail.strDrink}
           loading="lazy"
           className="thumb"
         />
-      </div>
+      </figure>
     </article>
   );
 }
