@@ -1,0 +1,69 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #111; overflow: hidden; }
+
+.container {
+  margin: 16px auto;
+  display: flex;
+  max-width: 1024px;
+  min-width: 360px;
+  height: calc(100vh - 40px);
+  border: 1px solid #ccc;
+}
+
+.sidebar {
+  width: 28%;
+  min-width: 180px;
+  border-right: 1px solid #ddd;
+  padding: 8px;
+  background: #fafafa;
+  overflow-y: auto;
+}
+
+.menuItem {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.menuItem:hover { background: #f0f0f0; }
+.menuItem.active { background: #e6e6e6; font-weight: 600; }
+
+.main {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.card {
+  display: flex;
+  gap: 16px;
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.cardContent { flex: 1; }
+.title { margin: 0 0 8px 0; }
+.meta { display: flex; gap: 12px; color: #555; margin-bottom: 12px; flex-wrap: wrap; }
+.instructions { margin-bottom: 12px; }
+
+.thumbWrap {
+  width: 200px;
+  height: 200px;
+  flex: none;
+  border: 1px solid #bbb;
+}
+.thumb { width: 100%; height: 100%; object-fit: cover; }
+
+@media (max-width: 720px) {
+  .container { flex-direction: column; }
+  .sidebar { width: 100%; min-height: 56px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .menuItem { margin-bottom: 0; }
+  .card { flex-direction: column-reverse; }
+  .thumbWrap { width: 100%; height: auto; }
+  .thumb { height: auto; }
+}
