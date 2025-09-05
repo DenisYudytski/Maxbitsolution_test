@@ -55,7 +55,6 @@ body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial
   width: 200px;
   height: 200px;
   flex: none;
-  border: 1px solid #bbb;
 }
 .thumb { width: 100%; height: 100%; object-fit: cover; }
 
