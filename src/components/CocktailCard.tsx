@@ -24,14 +24,14 @@ export default function CocktailCard({ cocktail }: { cocktail: Cocktail }) {
           </ul>
         </section>
       </div>
-      <figure className="thumbWrap">
+      <div className="thumbWrap">
         <img
           src={cocktail.strDrinkThumb}
           alt={cocktail.strDrink}
           loading="lazy"
           className="thumb"
         />
-      </figure>
+      </div>
     </article>
   );
 }
